@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import UseState from './pages/use-state'
 import UseEffect from './pages/use-effect'
+import UseContext from './pages/use-context'
 
 const Nav = () => (
   <div>
@@ -10,6 +11,7 @@ const Nav = () => (
       <li><Link to="/">Home</Link></li>
       <li><Link to="/useState">useState</Link></li>
       <li><Link to="/useEffect">useEffect</Link></li>
+      <li><Link to="/useContext">useContext</Link></li>
     </ul>
   </div>
 );
@@ -28,6 +30,7 @@ function App() {
           <Nav />
           <Route path="/useState" component={UseState} />
           <Route path="/useEffect" component={UseEffect} />
+          <Route path="/useContext" component={UseContext} />
         </div>
       </Router>
     </div>
